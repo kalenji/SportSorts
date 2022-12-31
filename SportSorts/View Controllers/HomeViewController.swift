@@ -4,7 +4,6 @@
 //
 //  Created by Kalin Gavrilov on 27.12.22.
 //
-
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -18,7 +17,6 @@ class HomeViewController: UIViewController {
 
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.

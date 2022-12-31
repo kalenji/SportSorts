@@ -221,26 +221,8 @@
                     <view key="view" contentMode="scaleToFill" id="LDE-bu-ABu">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ehou" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRc-sh-DBP">
-                                <rect key="frame" x="177" y="330" width="39" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPinkColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ags-6X-adP">
-                                <rect key="frame" x="177" y="452" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QQ2-pl-cHJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="qRc-sh-DBP" firstAttribute="top" secondItem="QQ2-pl-cHJ" secondAttribute="top" constant="271" id="4su-g1-apA"/>
-                            <constraint firstItem="QQ2-pl-cHJ" firstAttribute="bottom" secondItem="qRc-sh-DBP" secondAttribute="bottom" constant="467" id="GEv-7j-8Vf"/>
-                            <constraint firstItem="qRc-sh-DBP" firstAttribute="leading" secondItem="QQ2-pl-cHJ" secondAttribute="leading" constant="177" id="PMx-x5-khE"/>
-                            <constraint firstItem="QQ2-pl-cHJ" firstAttribute="trailing" secondItem="qRc-sh-DBP" secondAttribute="trailing" constant="177" id="ohQ-GF-6UK"/>
-                        </constraints>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ji-eg-vGT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -270,8 +252,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
