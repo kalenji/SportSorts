@@ -49,22 +49,6 @@ class AppViewModel: ObservableObject {
     }
 }
 
-struct HomeView: View {
-    var body: some View {
-        NavigationView{
-            Color.red
-        }
-    }
-}
-
-struct SettingsView: View {
-    var body: some View {
-        NavigationView{
-            Color.blue
-        }
-    }
-}
-
 struct ContentView: View {
     
     @EnvironmentObject var viewModel: AppViewModel
@@ -73,17 +57,19 @@ struct ContentView: View {
         NavigationView {
             if viewModel.signedIn {
                 VStack {
-                    Button {
-                        viewModel.signOut()
-                    } label: {
-                        Text("Sign Out")
-                            .frame(width: 200, height: 50)
-                            .background(Color.orange)
-                            .foregroundColor(Color.white)
-                            .cornerRadius(20)
-                            .padding()
+                    HStack {
+                        Button {
+                            viewModel.signOut()
+                        } label: {
+                            Text("Sign Out")
+                                .frame(width: 100, height: 50)
+                                .background(Color.orange)
+                                .foregroundColor(Color.white)
+                                .cornerRadius(20)
+                                .padding()
+                        }
+                        Spacer()
                     }
-                    
                     TabView {
                         HomeView()
                             .tabItem {
@@ -91,10 +77,22 @@ struct ContentView: View {
                                 Text("Home")
                             }
                         
+                        MapView()
+                            .tabItem {
+                                Image(systemName: "map")
+                                Text("Map")
+                            }
+                        
                         SettingsView()
                             .tabItem {
                                 Image(systemName: "gear")
                                 Text("Settings")
+                            }
+                        
+                        AccountView()
+                            .tabItem {
+                                Image(systemName: "person.crop.circle")
+                                Text("Account")
                             }
                     }
                     

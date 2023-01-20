@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3C81628C2979DBBA00108489 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C81628B2979DBBA00108489 /* GoogleService-Info.plist */; };
+		3C97631A297B11DE0078DC4E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C976319297B11DE0078DC4E /* SettingsView.swift */; };
+		3C97631C297B121D0078DC4E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97631B297B121D0078DC4E /* HomeView.swift */; };
+		3C97631E297B14580078DC4E /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97631D297B14580078DC4E /* AccountView.swift */; };
+		3C976320297B180E0078DC4E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97631F297B180E0078DC4E /* MapView.swift */; };
 		3CA2A2952979D3F0008618FE /* SportSortsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2A2942979D3F0008618FE /* SportSortsApp.swift */; };
 		3CA2A2972979D3F0008618FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2A2962979D3F0008618FE /* ContentView.swift */; };
 		3CA2A2992979D3F1008618FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA2A2982979D3F1008618FE /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* Begin PBXFileReference section */
 		314D2073F58C301F20D87174 /* Pods-SportSorts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportSorts.release.xcconfig"; path = "Target Support Files/Pods-SportSorts/Pods-SportSorts.release.xcconfig"; sourceTree = "<group>"; };
 		3C81628B2979DBBA00108489 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3C976319297B11DE0078DC4E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3C97631B297B121D0078DC4E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3C97631D297B14580078DC4E /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		3C97631F297B180E0078DC4E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		3CA2A2912979D3F0008618FE /* SportSorts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportSorts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA2A2942979D3F0008618FE /* SportSortsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportSortsApp.swift; sourceTree = "<group>"; };
 		3CA2A2962979D3F0008618FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +81,10 @@
 				3CA2A2982979D3F1008618FE /* Assets.xcassets */,
 				3C81628B2979DBBA00108489 /* GoogleService-Info.plist */,
 				3CA2A29A2979D3F1008618FE /* Preview Content */,
+				3C976319297B11DE0078DC4E /* SettingsView.swift */,
+				3C97631B297B121D0078DC4E /* HomeView.swift */,
+				3C97631D297B14580078DC4E /* AccountView.swift */,
+				3C97631F297B180E0078DC4E /* MapView.swift */,
 			);
 			path = SportSorts;
 			sourceTree = "<group>";
@@ -209,8 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C97631A297B11DE0078DC4E /* SettingsView.swift in Sources */,
+				3C976320297B180E0078DC4E /* MapView.swift in Sources */,
+				3C97631C297B121D0078DC4E /* HomeView.swift in Sources */,
 				3CA2A2972979D3F0008618FE /* ContentView.swift in Sources */,
 				3CA2A2952979D3F0008618FE /* SportSortsApp.swift in Sources */,
+				3C97631E297B14580078DC4E /* AccountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
