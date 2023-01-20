@@ -49,6 +49,22 @@ class AppViewModel: ObservableObject {
     }
 }
 
+struct HomeView: View {
+    var body: some View {
+        NavigationView{
+            Color.red
+        }
+    }
+}
+
+struct SettingsView: View {
+    var body: some View {
+        NavigationView{
+            Color.blue
+        }
+    }
+}
+
 struct ContentView: View {
     
     @EnvironmentObject var viewModel: AppViewModel
@@ -57,8 +73,6 @@ struct ContentView: View {
         NavigationView {
             if viewModel.signedIn {
                 VStack {
-                    Text("Signed In")
-                    
                     Button {
                         viewModel.signOut()
                     } label: {
@@ -69,6 +83,21 @@ struct ContentView: View {
                             .cornerRadius(20)
                             .padding()
                     }
+                    
+                    TabView {
+                        HomeView()
+                            .tabItem {
+                                Image(systemName: "house")
+                                Text("Home")
+                            }
+                        
+                        SettingsView()
+                            .tabItem {
+                                Image(systemName: "gear")
+                                Text("Settings")
+                            }
+                    }
+                    
                 }
 
             }else{
