@@ -25,6 +25,7 @@ struct LocationDetailView: View {
                     Divider()
                     descriptionSection
                     Divider()
+                    map
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()

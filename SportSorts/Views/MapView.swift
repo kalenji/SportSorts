@@ -46,7 +46,7 @@ extension MapView {
     private var header: some View {
         VStack{
             Button(action: vm.toggleLocationsList) {
-                Text(vm.mapLocation.name + ", " + vm.mapLocation.cityName)
+                Text(vm.mapLocation.name)
                     .font(.title2)
                     .fontWeight(.black)
                     .foregroundColor(.primary)
