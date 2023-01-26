@@ -78,6 +78,7 @@ struct ContentView: View {
                             }
                         
                         MapView()
+                            .environmentObject(LocationsViewModel())
                             .tabItem {
                                 Image(systemName: "map")
                                 Text("Map")
@@ -225,5 +226,6 @@ struct SignUpView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        
     }
 }
