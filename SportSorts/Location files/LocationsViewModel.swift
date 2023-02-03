@@ -36,7 +36,7 @@ class LocationsViewModel: ObservableObject {
     private func updateMapRegion(location: Location) {
         withAnimation(.easeInOut) {
             mapRegion = MKCoordinateRegion(
-                center: location.coordinates,
+                center: CLLocationCoordinate2D(latitude: 42.69438356280352, longitude: 23.330261024384797),
                 span: mapSpan)
         }
     }
