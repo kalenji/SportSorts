@@ -57,6 +57,16 @@ struct ContentView: View {
         NavigationView {
             if viewModel.signedIn {
                 VStack {
+                    Button {
+                        viewModel.signOut()
+                    } label: {
+                        Text("Sign Out")
+                            .foregroundColor(Color.white)
+                            .frame(width: 200, height: 50)
+                            .background(Color.orange)
+                            .cornerRadius(20)
+                    }
+
                     TabView {
                         HomeView()
                             .tabItem {
