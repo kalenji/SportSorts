@@ -68,29 +68,11 @@ struct ContentView: View {
                     }
 
                     TabView {
-                        HomeView()
-                            .tabItem {
-                                Image(systemName: "house")
-                                Text("Home")
-                            }
-                        
                         MapView()
                             .environmentObject(LocationsViewModel())
                             .tabItem {
                                 Image(systemName: "map")
                                 Text("Map")
-                            }
-                        
-                        SettingsView()
-                            .tabItem {
-                                Image(systemName: "gear")
-                                Text("Settings")
-                            }
-                        
-                        AccountView()
-                            .tabItem {
-                                Image(systemName: "person.crop.circle")
-                                Text("Account")
                             }
                     }
                     
