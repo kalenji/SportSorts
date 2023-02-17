@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3C0EB4FC2981C99F00776FBB /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EB4FB2981C99F00776FBB /* LocationsDataService.swift */; };
-		3C0EB5002981D2E600776FBB /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EB4FF2981D2E600776FBB /* LocationsViewModel.swift */; };
 		3C0EB5022981DEF400776FBB /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EB5012981DEF400776FBB /* LocationsListView.swift */; };
 		3C0EB5042981E7E300776FBB /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EB5032981E7E300776FBB /* LocationPreviewView.swift */; };
 		3C0EB50729829D8600776FBB /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EB50629829D8600776FBB /* LocationMapAnnotationView.swift */; };
 		3C0EB5092982A2BA00776FBB /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EB5082982A2BA00776FBB /* LocationDetailView.swift */; };
+		3C0EB50B298FD71D00776FBB /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EB4FF2981D2E600776FBB /* LocationsViewModel.swift */; };
 		3C81628C2979DBBA00108489 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C81628B2979DBBA00108489 /* GoogleService-Info.plist */; };
 		3C97631A297B11DE0078DC4E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C976319297B11DE0078DC4E /* SettingsView.swift */; };
 		3C97631C297B121D0078DC4E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97631B297B121D0078DC4E /* HomeView.swift */; };
@@ -265,12 +265,12 @@
 				3C0EB4FC2981C99F00776FBB /* LocationsDataService.swift in Sources */,
 				3C0EB5022981DEF400776FBB /* LocationsListView.swift in Sources */,
 				3CA2A2952979D3F0008618FE /* SportSortsApp.swift in Sources */,
+				3C0EB50B298FD71D00776FBB /* LocationsViewModel.swift in Sources */,
 				3C0EB50729829D8600776FBB /* LocationMapAnnotationView.swift in Sources */,
 				3C97631E297B14580078DC4E /* AccountView.swift in Sources */,
 				3C976324297C15830078DC4E /* Location.swift in Sources */,
 				3C0EB5092982A2BA00776FBB /* LocationDetailView.swift in Sources */,
 				3C0EB5042981E7E300776FBB /* LocationPreviewView.swift in Sources */,
-				3C0EB5002981D2E600776FBB /* LocationsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

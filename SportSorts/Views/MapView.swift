@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    
+    @State private var searchText = ""
     @EnvironmentObject private var vm: LocationsViewModel
     
     
@@ -44,30 +44,24 @@ struct MapView_Previews: PreviewProvider {
 
 extension MapView {
     private var header: some View {
-        VStack{
-            Button(action: vm.toggleLocationsList) {
-                Text(vm.mapLocation.name)
-                    .font(.title2)
-                    .fontWeight(.black)
-                    .foregroundColor(.primary)
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity )
-                    .animation(.none, value: vm.mapLocation)
-                    .overlay(alignment: .leading) {
-                        Image(systemName: "arrow.down")
-                            .font(.headline)
-                            .foregroundColor(.primary)
-                            .padding()
-                            .rotationEffect(Angle(degrees: vm.showLocationsList ? 180 : 0 ))
-                    }
+        NavigationStack{
+            List(searchResults){
+                locationSingle in Button(action: {vm.mapLocation=locationSingle}) {
+                    Text(locationSingle.name)
+                        .font(.title2)
+                        .fontWeight(.black)
+                        .foregroundColor(.primary)
+                        .frame(height: 30)
+                        .frame(maxWidth: .infinity )
+                        .animation(.none, value: vm.mapLocation)
+                }
+
             }
-            if vm.showLocationsList {
-                LocationsListView()
-            }
+            .listStyle(PlainListStyle())
+
         }
-        .background(.thickMaterial)
-        .cornerRadius(20)
-        .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 15)
+        .searchable(text: $searchText)
+        .frame(height:200,alignment: .topLeading)
     }
     
     private var map: some View {
@@ -95,4 +89,13 @@ extension MapView {
             }
         }
     }
+    
+    private var searchResults: [Location]{
+        if searchText.isEmpty{
+            return LocationsDataService.locations
+        }
+        else{
+            return LocationsDataService.locations.filter{$0.name.contains(searchText)}
+        }
+        }
 }
