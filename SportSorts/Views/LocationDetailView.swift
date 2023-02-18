@@ -11,11 +11,22 @@ import MapKit
 struct LocationDetailView: View {
     
     @EnvironmentObject private var vm: LocationsViewModel
-    @StateObject private var commentViewModel = CommentViewModel()
+    @StateObject private var commentsVM = CommentsViewModel()
+
+    
+    @State private var commentText: String = ""
+
+    private func addComment() {
+        guard !commentText.isEmpty else {
+            return
+        }
+        
+        commentsVM.addComment(Comment(text: commentText))
+        commentText = ""
+    }
+
     
     let location: Location
-    @State private var comment = ""
-    @State private var locationComments: [String] = []
 
     
     var body: some View {
@@ -117,28 +128,25 @@ extension LocationDetailView {
                 .padding()
         }
     }
-
+    
     private var commentSection: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 8) {
             Text("Comments")
-                .font(.title2)
+                .font(.title3)
                 .fontWeight(.semibold)
-            ForEach(locationComments, id: \.self) { comment in
-                Text(comment)
-                    .font(.body)
+            
+            TextField("Write a comment...", text: $commentText)
+                .textFieldStyle(.roundedBorder)
+            
+            Button("Post") {
+                let comment = Comment(text: commentText)
+                commentsVM.addComment(comment)
+                commentText = ""
             }
-            HStack(spacing: 16) {
-                TextField("Enter your comment", text: $comment)
-                    .padding()
-                Button("Submit") {
-                    commentViewModel.addComment(comment, to: location.id)
-                    locationComments.append(comment)
-                    comment = ""
-                }
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
+            Text("Comments")
+                .font(.headline)
+            ForEach(commentsVM.comments, id: \.self) { comment in
+                CommentView(comment: comment)
             }
         }
     }
