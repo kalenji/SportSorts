@@ -11,8 +11,12 @@ import MapKit
 struct LocationDetailView: View {
     
     @EnvironmentObject private var vm: LocationsViewModel
+    @StateObject private var commentViewModel = CommentViewModel()
     
     let location: Location
+    @State private var comment = ""
+    @State private var locationComments: [String] = []
+
     
     var body: some View {
         ScrollView {
@@ -26,6 +30,8 @@ struct LocationDetailView: View {
                     descriptionSection
                     Divider()
                     map
+                    Divider()
+                    commentSection
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
@@ -34,6 +40,7 @@ struct LocationDetailView: View {
         .background(.ultraThinMaterial)
         .ignoresSafeArea()
         .overlay(backButton, alignment: .topLeading)
+
     }
 }
 
@@ -109,6 +116,30 @@ extension LocationDetailView {
                 .shadow(radius: 4)
                 .padding()
         }
+    }
 
+    private var commentSection: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text("Comments")
+                .font(.title2)
+                .fontWeight(.semibold)
+            ForEach(locationComments, id: \.self) { comment in
+                Text(comment)
+                    .font(.body)
+            }
+            HStack(spacing: 16) {
+                TextField("Enter your comment", text: $comment)
+                    .padding()
+                Button("Submit") {
+                    commentViewModel.addComment(comment, to: location.id)
+                    locationComments.append(comment)
+                    comment = ""
+                }
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+            }
+        }
     }
 }
