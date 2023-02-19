@@ -20,6 +20,7 @@ struct Location: Identifiable, Equatable {
     let cityName: String
     let coordinates: CLLocationCoordinate2D
     let description: String
+    let workingTime: String
     let imageNames: [String]
     let link: String
 }

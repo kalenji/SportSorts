@@ -94,6 +94,11 @@ extension LocationDetailView {
                 .font(.subheadline)
                 .foregroundColor(.secondary)
             
+            Text(location.workingTime)
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .bold()
+            
             if let url = URL(string: location.link) {
                 Link("Read more", destination: url)
                     .font(.headline)
@@ -137,6 +142,11 @@ extension LocationDetailView {
             
             TextField("Write a comment...", text: $commentText)
                 .textFieldStyle(.roundedBorder)
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
+                .padding()
+                .background(Color(.secondarySystemBackground))
+                .cornerRadius(20)
             
             Button("Post") {
                 let comment = Comment(text: commentText)

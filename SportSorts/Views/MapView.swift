@@ -61,6 +61,11 @@ extension MapView {
 
         }
         .searchable(text: $searchText)
+        .disableAutocorrection(true)
+        .autocapitalization(.none)
+        .padding()
+        .background(Color(.secondarySystemBackground))
+        .cornerRadius(20)
         .frame(height:200,alignment: .topLeading)
     }
     
