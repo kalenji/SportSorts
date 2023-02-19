@@ -67,15 +67,12 @@ struct ContentView: View {
                             .cornerRadius(20)
                     }
 
-                    TabView {
-                        MapView()
-                            .environmentObject(LocationsViewModel())
-                            .tabItem {
-                                Image(systemName: "map")
-                                Text("Map")
-                            }
+                    MapView()
+                        .environmentObject(LocationsViewModel())
+                        .tabItem {
+                            Image(systemName: "map")
+                            Text("Map")
                     }
-                    
                 }
 
             }else{
