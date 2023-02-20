@@ -80,6 +80,7 @@
 		3C976325297C1AD20078DC4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3CA2A2962979D3F0008618FE /* ContentView.swift */,
 				3C97631F297B180E0078DC4E /* MapView.swift */,
 				3C0EB5032981E7E300776FBB /* LocationPreviewView.swift */,
 				3C0EB50629829D8600776FBB /* LocationMapAnnotationView.swift */,
@@ -112,7 +113,6 @@
 				3C0EB5052981F1BA00776FBB /* Location files */,
 				3C976325297C1AD20078DC4E /* Views */,
 				3CA2A2942979D3F0008618FE /* SportSortsApp.swift */,
-				3CA2A2962979D3F0008618FE /* ContentView.swift */,
 				3CA2A2982979D3F1008618FE /* Assets.xcassets */,
 				3C81628B2979DBBA00108489 /* GoogleService-Info.plist */,
 				3CA2A29A2979D3F1008618FE /* Preview Content */,

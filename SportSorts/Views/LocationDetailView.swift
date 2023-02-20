@@ -7,23 +7,15 @@
 
 import SwiftUI
 import MapKit
+import FirebaseFirestore
 
 struct LocationDetailView: View {
     
     @EnvironmentObject private var vm: LocationsViewModel
-    @StateObject private var commentsVM = CommentsViewModel()
+    @StateObject private var commentsVM = CommentsViewModel(comments: [])
 
     
     @State private var commentText: String = ""
-
-    private func addComment() {
-        guard !commentText.isEmpty else {
-            return
-        }
-        
-        commentsVM.addComment(Comment(text: commentText))
-        commentText = ""
-    }
 
     
     let location: Location
@@ -149,9 +141,7 @@ extension LocationDetailView {
                 .cornerRadius(20)
             
             Button("Post") {
-                let comment = Comment(text: commentText)
-                commentsVM.addComment(comment)
-                commentText = ""
+                saveComment()
             }
             Text("Comments")
                 .font(.headline)
@@ -159,5 +149,9 @@ extension LocationDetailView {
                 CommentView(comment: comment)
             }
         }
+    }
+    func saveComment() {
+        let db = Firestore.firestore()
+        db.collection("Comments").document().setData(["commentText":commentText])
     }
 }
