@@ -12,13 +12,18 @@ import FirebaseFirestore
 struct LocationDetailView: View {
     
     @EnvironmentObject private var vm: LocationsViewModel
-    @StateObject private var commentsVM = CommentsViewModel(comments: [])
+    @StateObject private var commentsVM = CommentsViewModel(locationID: "")
 
     
     @State private var commentText: String = ""
 
     
     let location: Location
+    
+    init(location: Location) {
+        self.location = location
+        _commentsVM = StateObject(wrappedValue: CommentsViewModel(locationID: location.id)) // Initialize CommentsViewModel with locationID
+    }
 
     
     var body: some View {
@@ -152,6 +157,6 @@ extension LocationDetailView {
     }
     func saveComment() {
         let db = Firestore.firestore()
-        db.collection("Comments").document().setData(["commentText":commentText])
+        db.collection("Comments").document().setData(["commentText":commentText, "locationID": location.id])
     }
 }

@@ -21,6 +21,6 @@ struct CommentView: View {
 
 struct CommentView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentView(comment: Comment(text: "Great place!"))
+        CommentView(comment: Comment(text: "Great place!", locationID: "1"))
     }
 }
