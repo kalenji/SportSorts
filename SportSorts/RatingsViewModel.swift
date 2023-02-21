@@ -11,6 +11,7 @@ import Firebase
 
 class RatingsViewModel: ObservableObject {
     @Published var ratings: [Rating] = []
+    @Published var averageRating: Double = 0.0
     let locationID: String // Add locationID property
     
     init(locationID: String) {
@@ -24,11 +25,21 @@ class RatingsViewModel: ObservableObject {
                     print("Error")
                     return
                 }
+                
+                var totalRating = 0.0
+                var count = 0
                 for i in snap!.documentChanges {
                     let dbRating = i.document.get("rating") as! Double
+                    totalRating += dbRating
+                    count += 1
                     DispatchQueue.main.async {
                         self.ratings.append(Rating(locationID: self.locationID, ratingValue: dbRating))
                     }
+                }
+                if count > 0 {
+                    self.averageRating = totalRating / Double(count)
+                } else {
+                    self.averageRating = 0.0
                 }
             }
     }

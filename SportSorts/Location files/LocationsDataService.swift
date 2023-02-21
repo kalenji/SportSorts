@@ -64,6 +64,30 @@ class LocationsDataService {
                 "spartak-3",
             ],
             link: "https://www.facebook.com/spartakswim"),
+        Location(
+            name: "Maleeva Tennis Club",
+            cityName: "Sofia",
+            coordinates: CLLocationCoordinate2D(latitude: 42.66832203044144, longitude: 23.328091740594196),
+            description: "Движение и грижа заедно със спорт, познание и отговорност",
+            workingTime: "Sunday, 7 AM–10 PM\nMonday, 7 AM–10 PM\nTuesday, 7 AM–10 PM\nWednesday, 7 AM–10 PM\nThursday, 7 AM–10 PM\nFriday, 7 AM–10 PM\nSaturday, 7 AM–10 PM",
+            imageNames: [
+                "maleeva-1",
+                "maleeva-2",
+                "maleeva-3",
+            ],
+            link: "http://maleevaclub.com/"),
+        Location(
+            name: "Swimming pool Diana",
+            cityName: "Sofia",
+            coordinates: CLLocationCoordinate2D(latitude: 42.66584126920354, longitude: 23.344177254794126),
+            description: "Плувният комплекс Диана е разположен на територията на Националния спортен комплекс Диана, който е част от Националната спортна база. Закритият плувен басейн на комплекса се използва от федерациите по плуване, петобой, триатлон и водна топка за тренировки и състезания. Капацитетът му е 500 души, а местата за сядане на трибуните - 320. Басейнът е с олимпийски размери, 50/20 м, с дълбочина 2,8 м и 8 коридора. Температурата на водата в него е 27 °С през цялата година. Достъп до басейна имат както професионални спортисти, така и всички любители на водните спортове. Освен басейна, на тяхно разположение са още фитнес зала, сауна, парна баня, джакузи и прилежащи тенис кортове. Трите открити плувни басейна на комплекса са с олимпийски размери и работят от 01.06. до 31.08. Те разполагат с филтърна инсталация, кула за скокове и две трибуни с капацитет 2 500 души. Допълнителен плюс на комплекса е наличието на магазини и безплатен паркинг.",
+            workingTime: "Sunday, Closed\nMonday, 7 AM–7 PM\nTuesday, 7 AM–7 PM\nWednesday, 7 AM–7 PM\nThursday, 7 AM–7 PM\nFriday, 7 AM–7 PM\nSaturday, 8 AM–4 PM",
+            imageNames: [
+                "diana-1",
+                "diana-2",
+                "diana-3",
+            ],
+            link: "https://visitsofia.bg/en/cityinfrastructure/what-to-do/water-sports/swimming-complex-diana"),
     ]
     
 }

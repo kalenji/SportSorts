@@ -13,6 +13,7 @@ struct LocationDetailView: View {
     
     @EnvironmentObject private var vm: LocationsViewModel
     @StateObject private var commentsVM = CommentsViewModel(locationID: "")
+    @StateObject private var ratingsVM = RatingsViewModel(locationID: "")
     @State private var rating: Int = 0
 
     
@@ -23,7 +24,8 @@ struct LocationDetailView: View {
     
     init(location: Location) {
         self.location = location
-        _commentsVM = StateObject(wrappedValue: CommentsViewModel(locationID: location.id)) // Initialize CommentsViewModel with locationID
+        _commentsVM = StateObject(wrappedValue: CommentsViewModel(locationID: location.id))
+        _ratingsVM = StateObject(wrappedValue: RatingsViewModel(locationID: location.id))
     }
 
     
@@ -150,6 +152,8 @@ extension LocationDetailView {
                                 saveRating()
                             }
                     }
+                    Text(String(format: "%.1f", ratingsVM.averageRating))
+                        .font(.headline)
                 }
             }
         }
