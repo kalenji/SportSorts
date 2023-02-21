@@ -16,6 +16,8 @@
 		3C81628C2979DBBA00108489 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C81628B2979DBBA00108489 /* GoogleService-Info.plist */; };
 		3C84CD0B29A0D7B300A59D48 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84CD0A29A0D7B300A59D48 /* Comment.swift */; };
 		3C84CD0D29A1399F00A59D48 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84CD0C29A1399F00A59D48 /* CommentView.swift */; };
+		3C94D46D29A4F5DE001C760A /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94D46C29A4F5DE001C760A /* Rating.swift */; };
+		3C94D46F29A4F621001C760A /* RatingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94D46E29A4F621001C760A /* RatingsViewModel.swift */; };
 		3C976320297B180E0078DC4E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97631F297B180E0078DC4E /* MapView.swift */; };
 		3C976324297C15830078DC4E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C976323297C15830078DC4E /* Location.swift */; };
 		3CA2A2952979D3F0008618FE /* SportSortsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2A2942979D3F0008618FE /* SportSortsApp.swift */; };
@@ -36,6 +38,8 @@
 		3C81628B2979DBBA00108489 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3C84CD0A29A0D7B300A59D48 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		3C84CD0C29A1399F00A59D48 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		3C94D46C29A4F5DE001C760A /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		3C94D46E29A4F621001C760A /* RatingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsViewModel.swift; sourceTree = "<group>"; };
 		3C97631F297B180E0078DC4E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		3C976323297C15830078DC4E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3CA2A2912979D3F0008618FE /* SportSorts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportSorts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +123,8 @@
 				3C0EB50C29A0D61C00776FBB /* CommentViewModel.swift */,
 				3C84CD0A29A0D7B300A59D48 /* Comment.swift */,
 				3C84CD0C29A1399F00A59D48 /* CommentView.swift */,
+				3C94D46C29A4F5DE001C760A /* Rating.swift */,
+				3C94D46E29A4F621001C760A /* RatingsViewModel.swift */,
 			);
 			path = SportSorts;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C976320297B180E0078DC4E /* MapView.swift in Sources */,
+				3C94D46F29A4F621001C760A /* RatingsViewModel.swift in Sources */,
 				3CA2A2972979D3F0008618FE /* ContentView.swift in Sources */,
 				3C0EB4FC2981C99F00776FBB /* LocationsDataService.swift in Sources */,
 				3CA2A2952979D3F0008618FE /* SportSortsApp.swift in Sources */,
@@ -267,6 +274,7 @@
 				3C0EB50D29A0D61C00776FBB /* CommentViewModel.swift in Sources */,
 				3C84CD0B29A0D7B300A59D48 /* Comment.swift in Sources */,
 				3C0EB5042981E7E300776FBB /* LocationPreviewView.swift in Sources */,
+				3C94D46D29A4F5DE001C760A /* Rating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

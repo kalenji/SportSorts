@@ -13,6 +13,7 @@ struct LocationDetailView: View {
     
     @EnvironmentObject private var vm: LocationsViewModel
     @StateObject private var commentsVM = CommentsViewModel(locationID: "")
+    @State private var rating: Int = 0
 
     
     @State private var commentText: String = ""
@@ -36,6 +37,8 @@ struct LocationDetailView: View {
                     titleSection
                     Divider()
                     descriptionSection
+                    Divider()
+                    ratingSection
                     Divider()
                     map
                     Divider()
@@ -131,6 +134,26 @@ extension LocationDetailView {
         }
     }
     
+    private var ratingSection: some View {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Rating")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                HStack {
+                    ForEach(1...5, id: \.self) { number in
+                        Image(systemName: number > rating ? "star" : "star.fill")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(number > rating ? .secondary : .yellow)
+                            .onTapGesture {
+                                rating = number
+                                saveRating()
+                            }
+                    }
+                }
+            }
+        }
+    
     private var commentSection: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Comments")
@@ -158,5 +181,9 @@ extension LocationDetailView {
     func saveComment() {
         let db = Firestore.firestore()
         db.collection("Comments").document().setData(["commentText":commentText, "locationID": location.id])
+    }
+    func saveRating() {
+        let db = Firestore.firestore()
+        db.collection("Ratings").document().setData(["rating":rating, "locationID": location.id])
     }
 }

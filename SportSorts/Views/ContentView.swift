@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 class AppViewModel: ObservableObject {
     
@@ -30,14 +31,25 @@ class AppViewModel: ObservableObject {
         }
     }
     
-    func signUp(email: String, password: String){
-        auth.createUser(withEmail: email, password: password){ [weak self] result, error in
-            guard result != nil, error == nil else{
+    func signUp(email: String, password: String, username: String){
+        auth.createUser(withEmail: email, password: password) { [weak self] result, error in
+            guard let user = result?.user, error == nil else {
                 return
             }
-            
-            DispatchQueue.main.async {
-                self?.signedIn = true
+
+            let data = [
+                "username": username
+            ]
+
+            let db = Firestore.firestore()
+            db.collection("users").document(user.uid).setData(data) { error in
+                guard error == nil else {
+                    return
+                }
+
+                DispatchQueue.main.async {
+                    self?.signedIn = true
+                }
             }
         }
     }
@@ -143,6 +155,8 @@ struct SignUpView: View {
     
     @State var email = ""
     @State var password = ""
+    @State var username = ""
+
     
     @EnvironmentObject var viewModel: AppViewModel
     
@@ -155,6 +169,13 @@ struct SignUpView: View {
                 
             VStack {
                 TextField("Email Address", text: $email)
+                    .disableAutocorrection(true)
+                    .autocapitalization(.none)
+                    .padding()
+                    .background(Color(.secondarySystemBackground))
+                    .cornerRadius(20)
+                
+                TextField("Username", text: $username)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .padding()
@@ -174,7 +195,7 @@ struct SignUpView: View {
                         return
                     }
                     
-                    viewModel.signUp(email: email, password: password)
+                    viewModel.signUp(email: email, password: password, username: username)
                         
                 } label: {
                     Text("Create Account")
