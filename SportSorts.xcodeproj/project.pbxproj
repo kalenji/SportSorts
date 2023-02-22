@@ -81,6 +81,25 @@
 			path = "Location files";
 			sourceTree = "<group>";
 		};
+		3C94D47229A66C97001C760A /* Rating files */ = {
+			isa = PBXGroup;
+			children = (
+				3C94D46E29A4F621001C760A /* RatingsViewModel.swift */,
+				3C94D46C29A4F5DE001C760A /* Rating.swift */,
+			);
+			path = "Rating files";
+			sourceTree = "<group>";
+		};
+		3C94D47329A66CB0001C760A /* Comment files */ = {
+			isa = PBXGroup;
+			children = (
+				3C84CD0C29A1399F00A59D48 /* CommentView.swift */,
+				3C84CD0A29A0D7B300A59D48 /* Comment.swift */,
+				3C0EB50C29A0D61C00776FBB /* CommentViewModel.swift */,
+			);
+			path = "Comment files";
+			sourceTree = "<group>";
+		};
 		3C976325297C1AD20078DC4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,17 +133,14 @@
 		3CA2A2932979D3F0008618FE /* SportSorts */ = {
 			isa = PBXGroup;
 			children = (
+				3C94D47329A66CB0001C760A /* Comment files */,
+				3C94D47229A66C97001C760A /* Rating files */,
 				3C0EB5052981F1BA00776FBB /* Location files */,
 				3C976325297C1AD20078DC4E /* Views */,
 				3CA2A2942979D3F0008618FE /* SportSortsApp.swift */,
 				3CA2A2982979D3F1008618FE /* Assets.xcassets */,
 				3C81628B2979DBBA00108489 /* GoogleService-Info.plist */,
 				3CA2A29A2979D3F1008618FE /* Preview Content */,
-				3C0EB50C29A0D61C00776FBB /* CommentViewModel.swift */,
-				3C84CD0A29A0D7B300A59D48 /* Comment.swift */,
-				3C84CD0C29A1399F00A59D48 /* CommentView.swift */,
-				3C94D46C29A4F5DE001C760A /* Rating.swift */,
-				3C94D46E29A4F621001C760A /* RatingsViewModel.swift */,
 			);
 			path = SportSorts;
 			sourceTree = "<group>";
