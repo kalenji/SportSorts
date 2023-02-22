@@ -22,8 +22,6 @@ class LocationsViewModel: ObservableObject {
     
     let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     
-    @Published var showLocationsList: Bool = false
-    
     @Published var sheetLocation: Location? = nil
     
     init() {
@@ -41,16 +39,9 @@ class LocationsViewModel: ObservableObject {
         }
     }
     
-    func toggleLocationsList() {
-        withAnimation(.easeInOut) {
-            showLocationsList = !showLocationsList
-        }
-    }
-    
     func showNextLocation(location: Location) {
         withAnimation(.easeInOut) {
             mapLocation = location
-            showLocationsList = false 
         }
     }
     
