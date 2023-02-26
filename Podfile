@@ -10,5 +10,6 @@ target 'SportSorts' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  inhibit_all_warnings!
 
 end

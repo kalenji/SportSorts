@@ -84,8 +84,8 @@
 		3C94D47229A66C97001C760A /* Rating files */ = {
 			isa = PBXGroup;
 			children = (
-				3C94D46E29A4F621001C760A /* RatingsViewModel.swift */,
 				3C94D46C29A4F5DE001C760A /* Rating.swift */,
+				3C94D46E29A4F621001C760A /* RatingsViewModel.swift */,
 			);
 			path = "Rating files";
 			sourceTree = "<group>";

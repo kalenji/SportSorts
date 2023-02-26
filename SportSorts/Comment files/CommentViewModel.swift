@@ -12,14 +12,14 @@ import Firebase
 
 class CommentsViewModel: ObservableObject {
     @Published var comments: [Comment] = []
-    let locationID: String // Add locationID property
+    let locationID: String
     
     init(locationID: String) {
-        self.locationID = locationID // Initialize locationID
+        self.locationID = locationID
         
         let db = Firestore.firestore()
         db.collection("Comments")
-            .whereField("locationID", isEqualTo: locationID) // Listen for comments associated with the current location
+            .whereField("locationID", isEqualTo: locationID)
             .addSnapshotListener { (snap, error) in
                 if error != nil {
                     print("Error")
